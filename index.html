@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-71929754-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+    <title>Safe Chat: Login</title>
+</head>
+<body class="b1">
+<div class="container top30 ">
+    <table class="table-responsive col-sm-6 text-center center t1">
+        <tr>
+            <td class="text-centered">
+                <div class="row col-center top15"><h1><span class="h1 label label-default">Safe Chat</span></h1></div>
+
+                <form action="joinChat.php" id="form" method="post">
+                    <div class="row form-group top50">
+                        <div class="col-sm-4 text-right"><span style="font-size: 16px" class="label label-primary">Name:</span></div>
+                        <div class="col-sm-4"><input class="form-control pull-left" type="text" id="name" name="name" maxlength="12" autocomplete="off" required></div>
+                    </div>
+                    <div class="row form-group top10">
+                        <div class="col-sm-4 text-right"><span style="font-size: 16px" class="label label-primary">Chatroom:</span></div>
+                        <div class="col-sm-4"><input class="form-control pull-left" type="text" id="chat" name="chat" maxlength="12" autocomplete="off" onkeydown="if (event.keyCode == 13) document.getElementById('button').click()" required></div>
+                    </div>
+                    <div class="row top15"><input class="btn btn-default btn-md" id="button" type="submit" value="Enter"></div>
+                </form>
+                <div class="row top15"></div>
+                <div class="row top15"></div>
+                <div class="row top15"></div>
+                <div class="row top15"></div>
+                <div class="row top15"></div>
+
+                <div class="row top100" style="text-align: center;">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-question-sign"></span></button>
+                </div>
+
+            </td>
+        </tr>
+    </table>
+</div>
+
+
+<div id="footer" class="mastfoot" style="text-align: center;" >
+    <div class="inner">
+        <br>
+        Seite erstellt von <a href="mailto:luiscoll7@gmail.com" style="color: #fff">Luis</a>.
+        <br>
+        </b>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title" style="align-text: center;">Willkommen bei Safe Chat!</h4>
+            </div>
+            <div class="modal-body">
+                <h2>Über:</h2>
+                <p>Safe Chat ist eine Chat-Anwendung, die für maximale Sicherheit entwickelt wurde. 
+				In jedem Fall werden nur 20 Nachrichten pro Chat in der Datenbank gespeichert. 
+				Wenn eine wietere Nachricht gesendet wird, wird die 21te Nachricht gelöscht. 
+				Benutzer haben auch selbst die Möglichkeit, den Inhalt eines jeden Chat vollständig zu löschen. 
+				Dies kann durch Klicken auf die Schaltfläche "Papierkorb" oben links auf der Chat-Seite erreicht werden. 
+				Chatroom-Namen müssen außerhalb dieser Anwendung der Personen übermittelt werden, wodurch eine weitere Sicherheitsstufe hinzugefügt wird.
+                </p>
+                <h2>Nutzung:</h2>
+                <p>         
+					Auf der Anmeldeseite können Sie den gewünschten Chatraum und den gewünschten Namen eingeben.
+                    Wenn der Chatroom, den Sie eingeben möchten, bereits erstellt wurde, können sie alle gespeicherten Nachrichten in diesem Chatroom lesen.
+                    Wenn der Chatroom noch nicht Existiert wird der Chatroom neu erstellt.
+                    Nach dem Login im Chatroom können Nachrichten durch Eingabe in das Textfeld gesendet werden.
+                    Die Schaltfläche "Papierkorb" oben links auf dem Bildschirm kann zum Löschen aller Nachrichten in einem bestimmten Chat verwendet werden
+					Aktualisierungen der Seite führt Sie zurück zur Anmeldeseite.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Beenden</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
